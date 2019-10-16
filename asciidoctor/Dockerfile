@@ -44,6 +44,7 @@ RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ru
 #    apk del bash curl unzip tar gcc g++ make ruby-dev python-dev py-pip libjpeg-turbo-dev zlib-dev zip mercurial && \
     rm -rf /tmp/* /var/cache/apk/* ~/.cache/pip
 
+COPY pygments_init.rb /
 WORKDIR /app
 
 #ENTRYPOINT cd jacamo && git pull && gradle release
